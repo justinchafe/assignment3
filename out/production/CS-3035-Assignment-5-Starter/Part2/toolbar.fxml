@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<HBox alignment="top_left"
+      spacing = "5"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="Part2.ToolBarController"
+      prefHeight="35.0" prefWidth="500.00">
+
+     <fx:define>
+        <ToggleGroup fx:id="colorGroup" />
+        <ToggleGroup fx:id="functionGroup" />
+     </fx:define>
+    <ToggleButton fx:id="greenButton" prefHeight="35.0"  text="green" style="-fx-base:#80b380;" toggleGroup="$colorGroup" onAction = "#setGreenButton"/>
+    <ToggleButton fx:id="redButton" prefHeight="35.0" text="red" style="-fx-base:#f35c5c;" toggleGroup="$colorGroup"  onAction = "#setRedButton"/>
+    <ToggleButton fx:id="blueButton" prefHeight="35.0" text="blue"  style="-fx-base:#b3ccff;"  toggleGroup="$colorGroup" selected="true" onAction = "#setBlueButton" />
+    <HBox spacing = "5">
+        <padding>
+            <Insets top="0" right="10" bottom="0" left="20" />
+        </padding>
+        <ToggleButton  fx:id="creation" prefHeight="35.0" text="create" toggleGroup="$functionGroup" onAction="#creation"  selected = "true" />
+        <ToggleButton fx:id="removal" prefHeight="35.0" text="delete" toggleGroup="$functionGroup" onAction="#removal"  />
+    </HBox>
+</HBox>
+
